@@ -1,0 +1,49 @@
+{
+  "name": "install-chamber",
+  "description": "Installs Segment Chamber (SSM Parameter Store CLI) into your actions workflow",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint './src/**/*.js'",
+    "build": "ncc build src/index.js -o dist --minify --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allixsenos/install-chamber.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "Chamber",
+    "AWS",
+    "SSM",
+    "Parameter Store"
+  ],
+  "author": "",
+  "type": "module",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allixsenos/install-chamber/issues"
+  },
+  "homepage": "https://github.com/allixsenos/install-chamber#readme",
+  "dependencies": {
+    "@actions/cache": "^5.0.2",
+    "@actions/core": "^2.0.2",
+    "@actions/exec": "^2.0.0",
+    "@actions/http-client": "^3.0.1",
+    "@actions/io": "^2.0.0",
+    "@actions/tool-cache": "^3.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
+    "@vercel/ncc": "^0.38.4",
+    "eslint": "^9.39.2",
+    "globals": "^17.0.0"
+  },
+  "volta": {
+    "node": "24"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

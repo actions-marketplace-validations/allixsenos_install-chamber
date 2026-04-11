@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+# docs: https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
+
+name: Install Chamber (cross-platform)
+description: Installs Segment Chamber (SSM Parameter Store CLI) into your actions workflow
+
+inputs:
+  version:
+    description: Chamber version
+    required: true
+    default: latest
+
+outputs:
+  chamber-bin:
+    description: Path to the Chamber binary file
+
+runs:
+  using: node24
+  main: dist/index.js
+
+branding:
+  icon: lock
+  color: blue
