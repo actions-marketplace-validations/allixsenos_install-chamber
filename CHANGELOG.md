@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/allixsenos/install-chamber/compare/install-chamber-v1.1.0...install-chamber-v1.1.1) (2026-04-12)
+
+
+### Bug Fixes
+
+* resolve release tag to SHA before creating floating tags ([9e49b12](https://github.com/allixsenos/install-chamber/commit/9e49b1298195dd2b000a3f3454d9d8de105b4666))
+
 ## [1.1.0](https://github.com/allixsenos/install-chamber/compare/install-chamber-v1.0.1...install-chamber-v1.1.0) (2026-04-11)
 
 
