@@ -26,14 +26,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
       - name: Update floating version tags
         env:
           MAJOR: ${{ needs.release-please.outputs.major }}
           MINOR: ${{ needs.release-please.outputs.minor }}
           TAG: ${{ needs.release-please.outputs.tag_name }}
         run: |
-          git tag -f "v${MAJOR}" "${TAG}"
+          SHA=$(git rev-list -n 1 "${TAG}")
+
+          git tag -f "v${MAJOR}" "${SHA}"
           git push origin "v${MAJOR}" --force
 
-          git tag -f "v${MAJOR}.${MINOR}" "${TAG}"
+          git tag -f "v${MAJOR}.${MINOR}" "${SHA}"
           git push origin "v${MAJOR}.${MINOR}" --force
